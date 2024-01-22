@@ -1,0 +1,44 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.footer_area{
+  background-color: #292930;
+  height: 600px;
+}
+
+#button {
+  display: inline-block;
+  background-color: $primary;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: $black;
+  text-align: center;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 18px;
+  z-index: 1000;
+  cursor: pointer;
+  animation: updown 2s linear infinite alternate;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}

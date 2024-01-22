@@ -1,0 +1,62 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.sales_products {
+  padding-top: 80px;
+}
+
+.sales_products_item {
+  margin: 0 2px;
+  border: 1px solid $border;
+
+  .image {
+    overflow: hidden;
+
+    img {
+      transition: $transition;
+    }
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  .text {
+    padding: 22px;
+
+    .title {
+      @include font(18px, 700);
+      color: $black;
+      text-transform: uppercase;
+    }
+
+    span {
+      @include font(14px, 600);
+      color: $paragraph;
+      margin-top: 10px;
+      margin-bottom: 20px;
+
+      i {
+        margin-left: 10px;
+      }
+    }
+
+    ul {
+      li+li {
+        margin-left: 20px;
+      }
+
+      li {
+        @include font(16px, 500);
+        color: $black;
+      }
+
+      li.discount {
+        color: #d30000;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.banner_area {
+  background-color: #EFF0ED;
+  padding-top: 180px;
+
+  .text {
+    padding-right: 60px;
+
+    .title {
+      @include font(60px, 700);
+      line-height: 68px;
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      @include font(18px, 500);
+      margin-bottom: 30px;
+      color: $black;
+    }
+  }
+}
