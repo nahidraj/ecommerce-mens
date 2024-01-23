@@ -10,6 +10,18 @@ $(function () {
   //   }, 0); // Change the delay value as per your requirement
 
   // });
+  // Fixed menu js start
+  $(window).on('scroll', function () {
+    var scroll = $(window).scrollTop();
+    if (scroll < 245) {
+      $("#sticky-header").removeClass("sticky-menu");
+      $("#header-fixed-height").removeClass("active-height");
+
+    } else {
+      $("#sticky-header").addClass("sticky-menu");
+      $("#header-fixed-height").addClass("active-height");
+    }
+  });
 
   $(".top_header_slider").slick({
     dots: false,
@@ -18,9 +30,9 @@ $(function () {
     slidesToShow: 1,
     autoplay: true,
     slidesToScroll: 1,
-    draggable:false,
-    fade:true,
-    arrows:false,
+    draggable: false,
+    fade: true,
+    arrows: false,
     prevArrow: '<i class="fas left icon fa-chevron-left"></i>',
     nextArrow: '<i class="fas right icon fa-chevron-right"></i>',
   });
@@ -32,8 +44,8 @@ $(function () {
     slidesToShow: 3,
     autoplay: false,
     slidesToScroll: 1,
-    fade:false,
-    arrows:false,
+    fade: false,
+    arrows: true,
     prevArrow: '<i class="fas left icon fa-chevron-left"></i>',
     nextArrow: '<i class="fas right icon fa-chevron-right"></i>',
   });
@@ -45,8 +57,8 @@ $(function () {
     slidesToShow: 4,
     autoplay: false,
     slidesToScroll: 1,
-    fade:false,
-    arrows:false,
+    fade: false,
+    arrows: true,
     prevArrow: '<i class="fas left icon fa-chevron-left"></i>',
     nextArrow: '<i class="fas right icon fa-chevron-right"></i>',
   });

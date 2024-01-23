@@ -4,6 +4,33 @@
 
 .sales_products {
   padding-top: 80px;
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid $border;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: $transition;
+    cursor: pointer;
+    position: absolute;
+    top: -90px;
+
+    &:hover {
+      border-color: $black;
+    }
+  }
+
+  .icon.left {
+    right: 376px;
+  }
+
+  .icon.right {
+    right: 316px;
+  }
 }
 
 .sales_products_item {

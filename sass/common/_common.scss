@@ -58,7 +58,10 @@ body {
   position: relative;
   font-family: 'DM Sans', sans-serif;
 }
-
+body{
+  max-width: 1920px !important;
+  margin: 0 auto;
+}
 main {
   position: relative;
   z-index: 9;

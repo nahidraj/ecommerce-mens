@@ -2,87 +2,91 @@
 @import "../mixin/font";
 @import "../mixin/line-limit";
 
-.header_area {
-  height: auto;
+
+.close_top_header {
+  background-color: transparent;
+  border: 0;
+  font-size: 20px;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 50%;
+  right: 100px;
+  transform: translateY(-50%);
+  color: $white;
+  z-index: 9;
+}
+
+.top_header {
+  position: relative;
   z-index: 999;
 
-  .close_top_header {
-    background-color: transparent;
-    border: 0;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    right: 100px;
-    transform: translateY(-50%);
-    color: $white;
-    z-index: 9;
+  .slider_one {
+    height: 40px;
+    background-color: #90917C;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      color: $white;
+      @include font(14px, 600);
+    }
   }
 
-  .top_header {
-    .slider_one {
-      height: 40px;
-      background-color: #90917C;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  .slider_two {
+    height: 40px;
+    background-color: #B17842;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-      p {
-        color: $white;
-        @include font(14px, 600);
-      }
+    p {
+      color: $white;
+      @include font(14px, 600);
     }
 
-    .slider_two {
-      height: 40px;
-      background-color: #B17842;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    ul {
+      li {
+        display: inline-block;
+        margin: 0 15px;
 
-      p {
-        color: $white;
-        @include font(14px, 600);
-      }
+        a {
+          color: $white;
+          @include font(14px, 600);
+          text-transform: uppercase;
+          position: relative;
 
-      ul {
-        li {
-          display: inline-block;
-          margin: 0 15px;
-
-          a {
-            color: $white;
-            @include font(14px, 600);
-            text-transform: uppercase;
-            position: relative;
-
-            &::before {
-              position: absolute;
-              top: 3px;
-              right: -17px;
-              width: 1px;
-              height: 15px;
-              background-color: $white;
-              opacity: 0.7;
-              content: "";
-            }
+          &::before {
+            position: absolute;
+            top: 3px;
+            right: -17px;
+            width: 1px;
+            height: 15px;
+            background-color: $white;
+            opacity: 0.7;
+            content: "";
           }
+        }
 
-          &:last-child {
-            a {
-              &::before {
-                display: none;
-              }
+        &:last-child {
+          a {
+            &::before {
+              display: none;
             }
           }
         }
       }
     }
   }
+}
+
+.header_area {
+  height: auto;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 
   nav {
     // padding-top: 35px;
@@ -134,9 +138,11 @@
           font-size: 16px;
         }
       }
-      .shopping_bag{
+
+      .shopping_bag {
         position: relative;
-        span{
+
+        span {
           background-color: $white;
           width: 20px;
           height: 20px;
@@ -153,4 +159,34 @@
       }
     }
   }
+}
+
+
+.sticky-menu {
+  position: fixed;
+  left: 0;
+  margin: auto;
+  top: 0;
+  width: 100%;
+  background-color: var(--white);
+  animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
+  box-shadow: 0 2px 20px rgba(25, 25, 25, 0.1);
+  border-radius: 0;
+}
+
+.sticky-menu .menu-area {
+  margin-top: 0;
+}
+
+.sticky-menu.header_area {
+  background-color: $white;
+}
+
+.sticky-menu.header_area nav{
+  padding: 12px 0;
+}
+
+#header-fixed-height.active-height {
+  display: block;
+  height: 100px;
 }
