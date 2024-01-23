@@ -303,7 +303,7 @@ main {
 }
 .header_area nav .menu_right_option li {
   display: inline-block;
-  margin-left: 24px;
+  margin-left: 26px;
 }
 .header_area nav .menu_right_option li a,
 .header_area nav .menu_right_option li button {
@@ -315,6 +315,23 @@ main {
 }
 .header_area nav .menu_right_option li .language {
   font-size: 16px;
+}
+.header_area nav .menu_right_option .shopping_bag {
+  position: relative;
+}
+.header_area nav .menu_right_option .shopping_bag span {
+  background-color: #ffffff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  position: absolute;
+  top: -5px;
+  right: -15px;
+  border: 1px solid #ddd;
 }
 
 .discover_collection {

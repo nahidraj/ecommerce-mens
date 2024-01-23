@@ -120,7 +120,7 @@
     .menu_right_option {
       li {
         display: inline-block;
-        margin-left: 24px;
+        margin-left: 26px;
 
         a,
         button {
@@ -132,6 +132,23 @@
 
         .language {
           font-size: 16px;
+        }
+      }
+      .shopping_bag{
+        position: relative;
+        span{
+          background-color: $white;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 11px;
+          position: absolute;
+          top: -5px;
+          right: -15px;
+          border: 1px solid $border;
         }
       }
     }
