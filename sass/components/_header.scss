@@ -3,11 +3,24 @@
 @import "../mixin/line-limit";
 
 .header_area {
-  height: 100px;
+  height: auto;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 999;
+
+  .close_top_header {
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    transform: translateY(-50%);
+    color: $white;
+    z-index: 9;
+  }
 
   .top_header {
     .slider_one {
@@ -72,6 +85,7 @@
   }
 
   nav {
+    padding-top: 35px;
     .nav-item {
       margin-left: 20px;
 

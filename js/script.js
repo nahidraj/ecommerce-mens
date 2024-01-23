@@ -11,7 +11,7 @@ $(function () {
 
   // });
 
-  $(".top_header").slick({
+  $(".top_header_slider").slick({
     dots: false,
     infinite: true,
     speed: 800,
