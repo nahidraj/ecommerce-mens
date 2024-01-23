@@ -1,0 +1,26 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.featured_products {
+  padding-top: 80px;
+
+  .sales_products_item {
+    border: 0;
+
+    .text {
+      padding-left: 0;
+      padding-right: 0;
+      .title{
+        @include font(52px, 700)
+      }
+    }
+
+    span {
+      margin-bottom: 0 !important;
+      text-transform: uppercase;
+      color: $black !important;
+      font-weight: 700 !important;
+    }
+  }
+}

@@ -371,6 +371,27 @@ main {
   margin-left: 10px;
 }
 
+.featured_products {
+  padding-top: 80px;
+}
+.featured_products .sales_products_item {
+  border: 0;
+}
+.featured_products .sales_products_item .text {
+  padding-left: 0;
+  padding-right: 0;
+}
+.featured_products .sales_products_item .text .title {
+  font-size: 52px;
+  font-weight: 700;
+}
+.featured_products .sales_products_item span {
+  margin-bottom: 0 !important;
+  text-transform: uppercase;
+  color: #292930 !important;
+  font-weight: 700 !important;
+}
+
 .sales_products {
   padding-top: 80px;
 }
