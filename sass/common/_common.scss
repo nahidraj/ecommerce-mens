@@ -98,8 +98,8 @@ main {
 
 // common btn
 .common_btn {
-  background-color: $primary;
-  border-radius: 6px;
+  background-color: $black;
+  border-radius: 60px;
   padding: 16px 38px;
   position: relative;
   transition: $transition;
@@ -116,7 +116,7 @@ main {
     content: "";
     height: 100%;
     width: 100%;
-    border-radius: 6px;
+    border-radius: 60px;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -124,7 +124,7 @@ main {
     right: 0;
     z-index: -1;
     transition: transform .5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    background-color: $primary;
+    background-color: $black;
   }
 
   &:hover {
