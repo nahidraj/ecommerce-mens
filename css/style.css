@@ -288,9 +288,10 @@ main {
   z-index: 999;
 }
 .header_area nav {
-  padding: 20px 0;
+  padding: 0px 0;
   background-color: transparent;
   transition: all 0.3s ease-in-out;
+  position: relative;
 }
 .header_area nav:hover {
   background-color: #ffffff;
@@ -298,10 +299,89 @@ main {
 .header_area nav .nav-item {
   margin-left: 20px;
 }
+.header_area nav .nav-item .sub_menu_one {
+  width: 100%;
+  background-color: #F2F0E8;
+  position: absolute;
+  top: 96px;
+  left: 0;
+  padding: 50px 100px;
+  transform-origin: top;
+  transform: perspective(400px) rotateX(-22deg);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.header_area nav .nav-item .sub_menu_one .sub_menu_item_label:first-child .sub_menu_item {
+  padding-left: 0;
+}
+.header_area nav .nav-item .sub_menu_one .sub_menu_item_label:last-child .sub_menu_item {
+  padding-right: 0;
+}
+.header_area nav .nav-item .sub_menu_one .sub_menu_item_label:last-child .sub_menu_item::before {
+  display: none;
+}
+.header_area nav .nav-item .sub_menu_one .sub_menu_item {
+  padding: 0 12px;
+  position: relative;
+  height: 100%;
+}
+.header_area nav .nav-item .sub_menu_one .sub_menu_item::before {
+  position: absolute;
+  top: 0;
+  right: -24px;
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: #ddd;
+}
+.header_area nav .nav-item .sub_menu_one .text {
+  margin-bottom: 24px;
+}
+.header_area nav .nav-item .sub_menu_one .title {
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.header_area nav .nav-item .sub_menu_one ul li a {
+  font-size: 15px;
+  font-weight: 400;
+  color: #292930;
+  margin-bottom: 4px;
+}
+.header_area nav .nav-item .sub_menu_one ul li a:hover {
+  color: #777777;
+}
+.header_area nav .nav-item .sub_menu_one .view_all {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #292930;
+}
+.header_area nav .nav-item .sub_menu_one .view_all:hover {
+  color: #777777;
+}
+.header_area nav .nav-item .sub_menu_one .image_title {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #292930;
+  margin-top: 15px;
+}
+.header_area nav .nav-item .sub_menu_one .image_title:hover {
+  color: #777777;
+}
+.header_area nav .nav-item:hover .sub_menu_one {
+  visibility: visible;
+  opacity: 1;
+  transform: unset;
+}
 .header_area nav .nav-item .nav-link {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
+  line-height: 80px;
 }
 .header_area nav .nav-item .nav-link i {
   margin-right: 4px;
@@ -365,8 +445,12 @@ main {
   background-color: #ffffff;
 }
 
-.sticky-menu.header_area nav {
-  padding: 12px 0;
+.sticky-menu.header_area nav .nav-link {
+  line-height: 70px;
+}
+
+.sticky-menu.header_area .sub_menu_one {
+  top: 80px !important;
 }
 
 #header-fixed-height.active-height {

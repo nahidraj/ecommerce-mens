@@ -90,9 +90,10 @@
 
   nav {
     // padding-top: 35px;
-    padding: 20px 0;
+    padding: 0px 0;
     background-color: transparent;
     transition: $transition;
+    position: relative;
 
     &:hover {
       background-color: $white;
@@ -101,9 +102,111 @@
     .nav-item {
       margin-left: 20px;
 
+      .sub_menu_one {
+        width: 100%;
+        background-color: #F2F0E8;
+        position: absolute;
+        top: 96px;
+        left: 0;
+        padding: 50px 100px;
+        transform-origin: top;
+        transform: perspective(400px) rotateX(-22deg);
+        opacity: 0;
+        visibility: hidden;
+        transition: $transition;
+
+        .sub_menu_item_label {
+          &:first-child {
+            .sub_menu_item {
+              padding-left: 0;
+            }
+          }
+
+          &:last-child {
+            .sub_menu_item {
+              padding-right: 0;
+
+              &::before {
+                display: none;
+              }
+            }
+          }
+        }
+
+        .sub_menu_item {
+          padding: 0 12px;
+          position: relative;
+          height: 100%;
+
+          &::before {
+            position: absolute;
+            top: 0;
+            right: -24px;
+            content: "";
+            width: 1px;
+            height: 100%;
+            background-color: $border;
+          }
+        }
+
+        .text {
+          margin-bottom: 24px
+        }
+
+        .title {
+          @include font(15px, 800);
+          text-transform: uppercase;
+          margin-bottom: 10px
+        }
+
+        ul {
+          li {
+            a {
+              @include font(15px, 400);
+              color: $black;
+              margin-bottom: 4px;
+
+              &:hover {
+                color: $paragraph;
+              }
+            }
+          }
+        }
+
+        .view_all {
+          @include font(13px, 700);
+          text-transform: uppercase;
+          color: $black;
+
+          &:hover {
+            color: $paragraph;
+          }
+        }
+
+        .image_title {
+          @include font(16px, 700);
+          text-transform: uppercase;
+          color: $black;
+          margin-top: 15px;
+
+          &:hover {
+            color: $paragraph;
+          }
+        }
+      }
+
+      &:hover {
+        .sub_menu_one {
+          visibility: visible;
+          opacity: 1;
+          transform: unset
+        }
+      }
+
       .nav-link {
         @include font(14px, 700);
         text-transform: uppercase;
+        line-height: 80px;
 
         i {
           margin-right: 4px;
@@ -182,8 +285,12 @@
   background-color: $white;
 }
 
-.sticky-menu.header_area nav{
-  padding: 12px 0;
+.sticky-menu.header_area nav .nav-link {
+  line-height: 70px;
+}
+
+.sticky-menu.header_area .sub_menu_one {
+  top: 80px !important;
 }
 
 #header-fixed-height.active-height {
