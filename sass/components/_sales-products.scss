@@ -2,6 +2,12 @@
 @import "../mixin/font";
 @import "../mixin/line-limit";
 
+.sales_products_slider {
+  width: 100%;
+  margin: 0 auto;
+  margin-left: -.5px;
+}
+
 .sales_products {
   padding-top: 80px;
 

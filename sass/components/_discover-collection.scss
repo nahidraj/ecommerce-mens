@@ -2,6 +2,12 @@
 @import "../mixin/font";
 @import "../mixin/line-limit";
 
+.discover_collection_slider {
+  width: 100%;
+  margin: 0 auto;
+  margin-left: -1px;
+}
+
 .discover_collection {
   padding-top: 80px;
 

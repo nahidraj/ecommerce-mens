@@ -96,6 +96,7 @@ main {
   .main_title {
     @include font(40px, 700);
     text-transform: uppercase;
+    padding-right: 140px;
   }
 }
 
