@@ -1222,7 +1222,7 @@ main {
 }
 .category_area .category_main .category_left_sidebar {
   flex: 0 0 auto;
-  padding-right: 50px;
+  padding-right: 60px;
 }
 .category_area .category_main .category_left_sidebar .filter_info {
   max-height: 300px;
