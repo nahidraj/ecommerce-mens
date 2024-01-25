@@ -58,10 +58,12 @@ body {
   position: relative;
   font-family: 'DM Sans', sans-serif;
 }
-body{
+
+body {
   max-width: 1920px !important;
   margin: 0 auto;
 }
+
 main {
   position: relative;
   z-index: 9;
@@ -98,6 +100,10 @@ main {
     text-transform: uppercase;
     padding-right: 140px;
   }
+}
+
+.container-fluid {
+  padding: 0 100px;
 }
 
 // common btn

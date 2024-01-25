@@ -103,6 +103,37 @@ $(function () {
     ]
   });
 
+  $(".category_product_item_slider").slick({
+    dots: false,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 1,
+    autoplay: false,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow: '<i class="fas left icon fa-chevron-left"></i>',
+    nextArrow: '<i class="fas right icon fa-chevron-right"></i>',
+    // responsive: [{
+    //     breakpoint: 1200,
+    //     settings: {
+    //       slidesToShow: 3,
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 768,
+    //     settings: {
+    //       slidesToShow: 2,
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 576,
+    //     settings: {
+    //       slidesToShow: 1,
+    //     }
+    //   },
+    // ]
+  });
+
 
 
   // back to top js
