@@ -144,6 +144,14 @@ $(function () {
     // ]
   });
 
+  // category prd left sidebar js
+  $(".filter_prd_btn").on("click",function(){
+    $(".category_left_sidebar").addClass("show_category_left_sidebar")
+  })
+  $(".filter_prd_btn_close").on("click",function(){
+    $(".category_left_sidebar").removeClass("show_category_left_sidebar")
+  })
+
   // product details image slider
   $('.product-image-slider').slick({
     dots: true,

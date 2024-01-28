@@ -4,18 +4,20 @@
 
 .breadcrumb_area {
   padding: 20px 0;
-  padding-top: 160px;
+  margin-top: 92px;
+  padding-top: 60px;
+  border-top: 1px solid #ddd;
   position: relative;
 
-  &::after {
-    position: absolute;
-    top: 96px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: $border;
-    content: "";
-  }
+  // &::after {
+  //   position: absolute;
+  //   top: 96px;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 1px;
+  //   background-color: $border;
+  //   content: "";
+  // }
 
   ul {
     li {
@@ -29,7 +31,8 @@
         @include font(14px, 700);
         color: $black;
         text-transform: uppercase;
-        &:hover{
+
+        &:hover {
           color: $paragraph;
         }
       }
@@ -42,8 +45,9 @@
         color: $paragraph;
         opacity: 0.3;
       }
-      &:first-child{
-        &::before{
+
+      &:first-child {
+        &::before {
           display: none;
         }
       }
