@@ -257,6 +257,7 @@
           top: 96px;
           left: 0;
           border-top: 1px solid $border;
+          border-bottom: 1px solid $border;
           visibility: hidden;
           opacity: 0;
           transition: $transition;
@@ -354,7 +355,7 @@
 
 #header-fixed-height.active-height {
   display: block;
-  height: 100px;
+  height: 0px;
 }
 
 

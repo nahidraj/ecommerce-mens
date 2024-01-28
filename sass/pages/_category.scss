@@ -20,7 +20,9 @@
 
     .category_left_sidebar {
       flex: 0 0 auto;
-      padding-right: 60px;
+      border: 1px solid $border;
+      padding: 30px;
+      margin-right: 30px;
 
       .filter_info {
         max-height: 300px;
@@ -251,5 +253,8 @@
         }
       }
     }
+  }
+  .featured_area{
+    padding-bottom: 0;
   }
 }

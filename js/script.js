@@ -10,6 +10,16 @@ $(function () {
   //   }, 0); // Change the delay value as per your requirement
 
   // });
+
+  // gallery popup js
+  $(".parent-container").magnificPopup({
+    delegate: "a",
+    type: "image",
+    gallery: {
+      enabled: true,
+    },
+  });
+
   // Fixed menu js start
   $(window).on('scroll', function () {
     var scroll = $(window).scrollTop();
@@ -134,7 +144,33 @@ $(function () {
     // ]
   });
 
+  // product details image slider
+  $('.product-image-slider').slick({
+    dots: true,
+    arrows: true,
+    prevArrow: '<i class="fas left icon fa-chevron-left"></i>',
+    nextArrow: '<i class="fas right icon fa-chevron-right"></i>',
+    customPaging: function (slick, index) {
+      var targetImage = slick.$slides.eq(index).find('img').attr('src');
+      return '<img src=" ' + targetImage + ' "/>';
+    }
+  });
 
+  // quantity js
+  $(".cart-minus").on('click', function () {
+    var $input = $(this).parent().find("input");
+    var count = parseInt($input.val()) - 1;
+    count = count < 1 ? 1 : count;
+    $input.val(count);
+    $input.change();
+    return false;
+  });
+  $(".cart-plus").on('click', function () {
+    var $input = $(this).parent().find("input");
+    $input.val(parseInt($input.val()) + 1);
+    $input.change();
+    return false;
+  });
 
   // back to top js
   var btn = $("#button");
@@ -213,22 +249,5 @@ $(function () {
     $(this).parent(".sub-mobile-menu").children("ul").slideToggle("100");
     $(this).find(".right").toggleClass("fa-caret-up fa-caret-down");
   });
-
-
-  // // Get all the choose--list elements
-  // const chooseListItems = document.querySelectorAll('.choose--list');
-
-  // // Add event listeners for hover
-  // chooseListItems.forEach(item => {
-  //   item.addEventListener('mouseenter', () => {
-  //     // Remove active class from all choose--list elements
-  //     chooseListItems.forEach(listItem => {
-  //       listItem.classList.remove('active--list');
-  //     });
-  //     // Add active class to the hovered element
-  //     item.classList.add('active--list');
-  //   });
-  // });
-
 
 });
