@@ -225,7 +225,7 @@
     z-index: 99999999;
     overflow-y: auto;
     transition: all .3s ease-in-out;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   }
 
   .show_category_left_sidebar {
@@ -295,6 +295,10 @@
 
   .container-fluid {
     padding: 0 30px;
+  }
+
+  .category_area .top_info {
+    padding-bottom: 32px;
   }
 }
 
