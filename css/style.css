@@ -1402,6 +1402,10 @@ main {
   padding-bottom: 80px;
   border-top: 1px solid #ddd;
 }
+.product_details_area .breadcrumb_area {
+  border: 0;
+  margin-top: 0;
+}
 .product_details_area .prd_image {
   position: relative;
   padding-left: 120px;
@@ -1560,7 +1564,7 @@ main {
   margin-left: 10px;
 }
 .product_details_area .text .more_info .sizes .filter_by_size .form-check {
-  width: 15%;
+  width: auto;
   padding-left: 0;
 }
 .product_details_area .text .more_info .sizes .filter_by_size .form-check-input {
@@ -1636,11 +1640,17 @@ main {
   margin-left: 20px;
   transition: all 0.3s ease-in-out;
   text-transform: uppercase;
+  border: 1px solid transparent;
+}
+.product_details_area .text .more_info .quantity_and_bag .add-to-cart a:hover {
+  border-color: #292930;
+  color: #292930;
+  background-color: transparent;
 }
 .product_details_area .text .more_info .quantity_and_bag .wishlist a {
   width: 45px;
-  height: 45px;
-  line-height: 45px;
+  height: 47px;
+  line-height: 47px;
   background-color: #292930;
   border: none;
   font-size: 24px;
@@ -1651,6 +1661,12 @@ main {
   font-size: 18px;
   border-radius: 3px;
   margin-left: 20px;
+  border: 1px solid transparent;
+}
+.product_details_area .text .more_info .quantity_and_bag .wishlist a:hover {
+  border-color: #292930;
+  color: #292930;
+  background-color: transparent;
 }
 .product_details_area .overview-and-specification {
   margin-top: 80px;

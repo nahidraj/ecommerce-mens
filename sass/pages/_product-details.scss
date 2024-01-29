@@ -8,6 +8,11 @@
   padding-bottom: 80px;
   border-top: 1px solid $border;
 
+  .breadcrumb_area {
+    border: 0;
+    margin-top: 0;
+  }
+
   .prd_image {
     position: relative;
     padding-left: 120px;
@@ -198,7 +203,7 @@
           margin-left: 10px;
 
           .form-check {
-            width: 15%;
+            width: auto;
             padding-left: 0;
           }
 
@@ -287,13 +292,20 @@
           margin-left: 20px;
           transition: $transition;
           text-transform: uppercase;
+          border: 1px solid transparent;
+
+          &:hover {
+            border-color: $black;
+            color: $black;
+            background-color: transparent;
+          }
         }
 
         .wishlist {
           a {
             width: 45px;
-            height: 45px;
-            line-height: 45px;
+            height: 47px;
+            line-height: 47px;
             background-color: $black;
             border: none;
             font-size: 24px;
@@ -304,6 +316,13 @@
             font-size: 18px;
             border-radius: 3px;
             margin-left: 20px;
+            border: 1px solid transparent;
+
+            &:hover {
+              border-color: $black;
+              color: $black;
+              background-color: transparent;
+            }
           }
         }
       }
