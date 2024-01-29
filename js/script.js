@@ -152,6 +152,23 @@ $(function () {
     $(".category_left_sidebar").removeClass("show_category_left_sidebar")
   })
 
+  // products item add to cart js
+  $(".clickable_btn").on("click", function () {
+    // Find the closest parent with class 'category_prd_item_label'
+    var parentCategoryItem = $(this).closest('.category_prd_item_label');
+  
+    // Find the '.add_to_cart_option' within the same parent
+    var addToCartOption = parentCategoryItem.find('.add_to_cart_option .main_info');
+  
+    // Toggle the class only for the specific '.add_to_cart_option'
+    addToCartOption.toggleClass("show_add_to_cart_option");
+  
+    // Toggle the icon between 'fa-shopping-bag' and 'fa-times'
+    var icon = $(this).find('i');
+    icon.toggleClass("fa-shopping-bag fa-times");
+  });
+  
+
   // product details image slider
   $('.product-image-slider').slick({
     dots: true,

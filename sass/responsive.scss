@@ -320,6 +320,10 @@
   .product_details_area .prd_image .slick-dots {
     left: -85px;
   }
+
+  .account_area {
+    margin-top: 148px;
+  }
 }
 
 @media (max-width:575.98px) {
@@ -484,5 +488,14 @@
 
   .product_details_area .prd_image .right {
     right: 16px;
+  }
+
+  .shop_title_top .shop_title {
+    font-size: 28px;
+  }
+
+  .account_area .more_info {
+    padding-top: 44px;
+    margin-top: 18px;
   }
 }

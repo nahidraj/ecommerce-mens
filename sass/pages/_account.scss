@@ -1,0 +1,124 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.account_area {
+  margin-top: 200px;
+  padding-bottom: 80px;
+
+  .account_main {
+    padding: 0px 0;
+    min-height: calc(100vh - 140px);
+    // border: 1px solid $border;
+    // border-radius: 10px;
+    // padding: 40px 30px;
+  }
+
+  .account_title {
+    @include font(46px, 800);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .logout_btn {
+    text-transform: uppercase;
+    @include font(14px, 900);
+    letter-spacing: 1px;
+    color: $white;
+    border-radius: 30px;
+    background-color: $black;
+    padding: 12px 30px;
+    border: 1px solid transparent;
+
+    &:hover {
+      border-color: $black;
+      color: $black;
+      background-color: transparent;
+    }
+  }
+
+  .order_history {
+    margin-top: 50px;
+
+    .title {
+      text-transform: uppercase;
+      @include font(16px, 900);
+      margin-bottom: 10px;
+    }
+  }
+
+  .more_info {
+    // border-top: 1px solid $border;
+    padding-top: 40px;
+    margin-top: 80px;
+
+    fieldset {
+      border: 1px solid $border;
+      padding: 24px;
+      padding-top: 35px;
+      position: relative;
+      height: 100%;
+
+      span {
+        position: absolute;
+        @include font(15px, 700);
+        color: $black;
+        text-transform: uppercase;
+        background-color: $bg;
+        border-radius: 5px;
+        padding: 3px 15px;
+        top: -12px;
+        left: 24px;
+        display: inline-block !important;
+      }
+
+      table {
+        th {
+          @include font(15px, 600);
+        }
+
+        td {
+          font-size: 15px;
+        }
+      }
+
+      .sign_up_now {
+        margin-bottom: 15px;
+
+        label {
+          @include font(14px, 500);
+        }
+      }
+
+      .form-check-input:checked {
+        background-color: $black;
+        border-color: $black;
+      }
+
+      .select_gender {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 0px;
+
+        label {
+          @include font(14px, 600);
+          text-transform: uppercase;
+        }
+      }
+
+      .privacy_policy {
+        @include font(15px, 400);
+        color: $black;
+        margin-top: 20px;
+        display: inline-block;
+
+        button {
+          text-decoration: underline;
+          background-color: transparent;
+          border: 0;
+        }
+      }
+    }
+  }
+}
