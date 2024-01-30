@@ -121,4 +121,77 @@
       }
     }
   }
+
+  .return_account {
+    @include font(14px, 500);
+    color: $black;
+    text-decoration: underline;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+
+  .view_address {
+    .title {
+      @include font(20px, 700);
+      text-transform: uppercase;
+      margin: 40px 0 20px 0;
+    }
+  }
+
+  .address_view {
+    margin-top: 0;
+
+    fieldset {
+      height: unset;
+    }
+  }
+
+  .add_new_address {
+    .input_groups {
+      label {
+        @include font(16px, 500);
+        margin-bottom: 5px;
+      }
+
+      select,
+      input {
+        width: 100%;
+        height: 50px;
+        border: 1px solid $border;
+        border-radius: 0;
+        padding: 0 20px;
+        background-color: transparent;
+        transition: $transition;
+
+        &:focus {
+          border-color: $black;
+        }
+      }
+    }
+
+    .form-check{
+      input{
+        cursor: pointer;
+        &:checked{
+          background-color: $black;
+        }
+      }
+      label{
+        cursor: pointer;
+        @include font(15px, 400);
+      }
+    }
+    .button_groups {
+      .submit_btn {
+        background-color: $black;
+        height: 50px;
+        width: 100%;
+        border: 0;
+        color: $white;
+        @include font(14px, 600);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+    }
+  }
 }

@@ -2238,6 +2238,67 @@ main {
   background-color: transparent;
   border: 0;
 }
+.account_area .return_account {
+  font-size: 14px;
+  font-weight: 500;
+  color: #292930;
+  text-decoration: underline;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+.account_area .view_address .title {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 40px 0 20px 0;
+}
+.account_area .address_view {
+  margin-top: 0;
+}
+.account_area .address_view fieldset {
+  height: unset;
+}
+.account_area .add_new_address .input_groups label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.account_area .add_new_address .input_groups select,
+.account_area .add_new_address .input_groups input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  padding: 0 20px;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+.account_area .add_new_address .input_groups select:focus,
+.account_area .add_new_address .input_groups input:focus {
+  border-color: #292930;
+}
+.account_area .add_new_address .form-check input {
+  cursor: pointer;
+}
+.account_area .add_new_address .form-check input:checked {
+  background-color: #292930;
+}
+.account_area .add_new_address .form-check label {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 400;
+}
+.account_area .add_new_address .button_groups .submit_btn {
+  background-color: #292930;
+  height: 50px;
+  width: 100%;
+  border: 0;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 
 .checkout_area {
   min-height: calc(100vh - 140px);
