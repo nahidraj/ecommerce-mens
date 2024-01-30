@@ -233,89 +233,91 @@
       }
     }
 
-    .menu_right_option {
-      li {
-        display: inline-block;
-        margin-left: 26px;
 
-        .menu_option_,
-        button {
-          color: $black;
-          background-color: transparent;
-          border: 0;
-          @include font(17px, 700);
-        }
+  }
+}
 
-        .language {
-          font-size: 16px;
-        }
+.menu_right_option {
+  li {
+    display: inline-block;
+    margin-left: 26px;
 
-        .search_field {
-          width: 100%;
-          background-color: $white;
-          position: absolute;
-          top: 96px;
-          left: 0;
-          border-top: 1px solid $border;
-          border-bottom: 1px solid $border;
-          visibility: hidden;
-          opacity: 0;
-          transition: $transition;
+    .menu_option_,
+    button {
+      color: $black;
+      background-color: transparent;
+      border: 0;
+      @include font(17px, 700);
+    }
 
-          .input_groups {
-            max-width: 1295px;
-            margin: 0 auto;
-            position: relative;
+    .language {
+      font-size: 16px;
+    }
 
-            input {
-              width: 100%;
-              height: 45px;
-              border: 0;
-              padding-left: 50px;
-              padding-right: 50px;
-            }
+    .search_field {
+      width: 100%;
+      background-color: $white;
+      position: absolute;
+      top: 96px;
+      left: 0;
+      border-top: 1px solid $border;
+      border-bottom: 1px solid $border;
+      visibility: hidden;
+      opacity: 0;
+      transition: $transition;
 
-            .search_btn {
-              position: absolute;
-              top: 50%;
-              transform: translateY(-50%);
-              left: 0;
-            }
-          }
-
-          .close_search_field {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            right: 0;
-            font-size: 18px;
-          }
-        }
-
-        .active_search_field {
-          visibility: visible;
-          opacity: 1;
-        }
-      }
-
-      .shopping_bag {
+      .input_groups {
+        max-width: 1295px;
+        margin: 0 auto;
         position: relative;
 
-        span {
-          background-color: $white;
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 11px;
+        input {
+          width: 100%;
+          height: 45px;
+          border: 0;
+          padding-left: 50px;
+          padding-right: 50px;
+        }
+
+        .search_btn {
           position: absolute;
-          top: -5px;
-          right: -15px;
-          border: 1px solid $border;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
         }
       }
+
+      .close_search_field {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        font-size: 18px;
+      }
+    }
+
+    .active_search_field {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .shopping_bag {
+    position: relative;
+
+    span {
+      background-color: $white;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 11px;
+      position: absolute;
+      top: -5px;
+      right: -15px;
+      border: 1px solid $border;
     }
   }
 }
@@ -331,6 +333,10 @@
   animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
   box-shadow: 0 2px 20px rgba(25, 25, 25, 0.1);
   border-radius: 0;
+
+  .menu_right_option li .search_field {
+    top: 61px;
+  }
 }
 
 .sticky-menu .menu-area {
@@ -467,7 +473,7 @@
   font-size: 14px !important;
   font-weight: 900 !important;
   text-transform: uppercase;
-  background-color:$black !important;
+  background-color: $black !important;
   padding: 10px 26px;
   color: $white !important;
   border-radius: 30px;
@@ -512,11 +518,10 @@
 .mobile-menu-area .mobile-topbar .bars i {
   width: 40px;
   height: 40px;
-  background-color: transparent;
-  color: $white;
+  color: $black;
   border-radius: 50%;
-  background-color: $black;
-  font-size: 16px;
+  background-color: transparent;
+  font-size: 18px;
   text-align: center;
   border-radius: 50px;
   display: flex;
@@ -569,6 +574,13 @@
 
 .mobile-menu-area .mobile-menu-main .logo {
   padding: 20px;
+  border-bottom: 1px solid $border;
+}
+
+.mobile-menu-area {
+  .menu-body {
+    margin-top: 10px;
+  }
 }
 
 .mobile-menu-area .mobile-menu-main .close-mobile-menu {
@@ -587,10 +599,6 @@
   cursor: pointer;
   transition: all linear 0.2s;
   transition: all 0.3s ease-in-out;
-}
-
-.mobile-menu-area .mobile-menu-main .close-mobile-menu i:hover {
-  color: $primary;
 }
 
 .mobile-menu-area .mobile-menu-main .menu-body .menu-list {
